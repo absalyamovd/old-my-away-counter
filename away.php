@@ -56,21 +56,7 @@ if ($USER->IsAuthorized()
 
             //перейдем к курсу
             //костыль из \bitrix\templates\xxx\components\bitrix\news\courses_refilter\bitrix\news.detail\.default\template.php:
-            if ($arFields["ID"] == 76858
-                || $arFields["ID"] == 76859
-                || $arFields["ID"] == 76861
-                || $arFields["ID"] == 76863
-                || $arFields["ID"] == 76864
-                || $arFields["ID"] == 76865
-                || $arFields["ID"] == 76866
-                || $arFields["ID"] == 76867
-                || $arFields["ID"] == 76868
-                || $arFields["ID"] == 76869
-                || $arFields["ID"] == 76826
-                || $arFields["ID"] == 76870
-                || $arFields["ID"] == 76986
-                || $arFields["ID"] == 76987
-            ) {
+            if ($arFields["ID"], array('p1','p2','p3')) {
                 header('Location: ' . BnhExtAuth::getToken($arFields['PROPERTY_URLKURS_VALUE']));
                 //echo BnhExtAuth::getToken($arFields['PROPERTY_URLKURS_VALUE']);
             } else
